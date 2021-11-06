@@ -3,7 +3,10 @@ from socket import *
 import sys
 import os
 
-ENCODE_FORMAT = "utf-8"
+FORMAT = "utf-8"
+MESSAGE_SIZE = 1024
+PORT_SIZE = 10
+RESPONSE_SIZE = 4096
 
 
 def main():
@@ -27,7 +30,33 @@ def main():
                 )
             else:
                 # " ".join(command)
-                cSocket.send(command.encode(ENCODE_FORMAT))
+                commandString = " ".join(command)
+                cSocket.send(commandString.encode(FORMAT))
+
+                data = bytearray()
+                while len(data) < PORT_SIZE:
+                    packet = cSocket.recv(PORT_SIZE - len(data))
+                    if not packet:
+                        return None
+                    data.extend(packet)
+                ephemeralSocketPortNumber = data
+
+                ephemeralSocketPortNumberDecoded = int(
+                    ephemeralSocketPortNumber.decode(FORMAT)
+                )
+
+                print(f"Ephemeral port {ephemeralSocketPortNumberDecoded}")
+
+                ephemeralSocket = socket(AF_INET, SOCK_STREAM)
+                ephemeralSocket.connect((cIP, ephemeralSocketPortNumberDecoded))
+                data = bytearray()
+                while len(data) < RESPONSE_SIZE:
+                    packet = cSocket.recv(RESPONSE_SIZE - len(data))
+                    if not packet:
+                        return None
+                    data.extend(packet)
+                dataDecoded = data.decode(FORMAT)
+                print(f"{dataDecoded}")
 
 
 if __name__ == "__main__":
