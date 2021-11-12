@@ -2,7 +2,7 @@
 
 ## Group Members
 - Ismael Barajas: ismaelbarajas30@csu.fullerton.edu
-- Casey
+- Casey Thatsanaphonh: cthatsanaphonh@csu.fullerton.edu
 -
 -
 
