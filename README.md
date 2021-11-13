@@ -3,7 +3,7 @@
 ## Group Members
 - Ismael Barajas: ismaelbarajas30@csu.fullerton.edu
 - Casey
--
+- Michael Lam: micheallam@csu.fullerton.edu
 -
 
 ## Programming Language
