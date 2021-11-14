@@ -3,11 +3,11 @@
 ## Group Members
 - Ismael Barajas: ismaelbarajas30@csu.fullerton.edu
 - Casey Thatsanaphonh: cthatsanaphonh@csu.fullerton.edu
--
+- Michael Lam: micheallam@csu.fullerton.edu
 -
 
 ## Programming Language
-*Python 3.9 or newer*
+*Python 3.8.10 or newer*
 
 ## How to Run Program
 ### First Start Server
