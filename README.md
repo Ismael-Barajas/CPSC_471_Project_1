@@ -7,7 +7,7 @@
 -
 
 ## Programming Language
-*Python 3.9 or newer*
+*Python 3.8.10 or newer*
 
 ## How to Run Program
 ### First Start Server
