@@ -4,7 +4,7 @@
 - Ismael Barajas: ismaelbarajas30@csu.fullerton.edu
 - Casey Thatsanaphonh: cthatsanaphonh@csu.fullerton.edu
 - Michael Lam: micheallam@csu.fullerton.edu
--
+- Aidin Tavassoli: aidin.tavassoli@csu.fullerton.edu
 
 ## Programming Language
 *Python 3.8.10 or newer*
