@@ -9,13 +9,13 @@
 
 ## Protocol Design
 
-# Client Side:
+### Client Side:
 The protocol uses 2 different sockets on the client side:
 
 1. cSocket : this is the clients control socket which establishes the connection with the servers listening port. Commands are sent through this socket.
 2. ephemeralSocekt: this socket establishes a connection with the servers ephemeralSocket which is used to send/receive bytes.
    Control Channel: cSocket is the control channel and it transmits commands from the client to the server.
- # Server Side:
+ ### Server Side:
   - ephemralSocket class is the helper class that manages the ephemeral socket using the functions below:
   - create_listen() function creates an ephemeral socket on which the server listens for connection.
   - wait() function allows the server to wait for connection from the epehrmeralSocket and accept connection from the client.
