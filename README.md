@@ -22,8 +22,7 @@ The protocol uses 2 different sockets on the client side:
    Data received on the cSocket is decode by the operations() function and the server takes appropriate action based on the received command from the client on cSocket.
    Each operation creates an instance of ephemeralSocket object with a 3 second timeout and performs the operation requested by the client.
 
-- Message:
-- Message size is 1024 and the format is utf-8 with the response size of 4096.
+- Message: Message size is 1024 and the format is utf-8 with the response size of 4096.
 - File Transfer Channel: client must receive the message containing the server’s ephemeral socket port number and decode it and then establish a connection using IP and the port number to begin receiving on that channel.
 - Controlling Stop/Start Receiving Files: Keeping track of response size inside of a loop allows us to receive the file in chunks and works like a TCP buffer which receives up to a predetermined (hard coded) maximum response size and the append to the file then continues to receive the remainder of the file in the same manner until the sender stops sending.
 
