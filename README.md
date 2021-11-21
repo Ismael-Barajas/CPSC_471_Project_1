@@ -26,6 +26,9 @@ The protocol uses 2 different sockets on the client side:
 - File Transfer Channel: client must receive the message containing the server’s ephemeral socket port number and decode it and then establish a connection using IP and the port number to begin receiving on that channel.
 - Controlling Stop/Start Receiving Files: Keeping track of response size inside of a loop allows us to receive the file in chunks and works like a TCP buffer which receives up to a predetermined (hard coded) maximum response size and the append to the file then continues to receive the remainder of the file in the same manner until the sender stops sending.
 
+## FTP Diagram: 
+![alt text](https://i.imgur.com/g094r0x.png)
+
 ## Programming Language
 
 _Python 3.8.10 or newer_
